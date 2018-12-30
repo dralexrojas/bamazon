@@ -60,7 +60,7 @@ The goal of this project was to create an Amazon-like storefront using Node.js a
 
 ![customerorderQTY](./screenshots/customer-inputQTY.png)
 
-![customerordernotenough](./screenshots/customer-not-enough)
+![customerordernotenough](./screenshots/customer-not-enough.png)
 
 ![customerorderTotal](./screenshots/customer-orderTotal.png)
 
