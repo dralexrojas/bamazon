@@ -10,7 +10,7 @@ var connection = mysql.createConnection({
   user: "root",
 
   // Your password
-  password: "GCSMySQL",
+  password: "",
   database: "bamazon"
 });
 
@@ -41,12 +41,12 @@ function supervisorStart(){
     connection.query('SELECT * FROM departments', function(err, results){
       if(err) throw err;
       console.log(' ');
-      console.log('******************************* Product Sales by Department ****************************************');
-      console.log('----------------------------------------------------------------------------------------------------')
+      console.log('************************************************** Product Sales by Department ***************************************************');
+      console.log('-----------------------------------------------------------------------------------------------------------------------------------')
   
       for(var i = 0; i<results.length;i++){
         console.log("Department ID: " + results[i].department_id + " || " + "Department Name: " + results[i].department_name + " | " + "Over Head Cost: " + (results[i].over_head_cost).toFixed(2) + " | " + "Product Sales: " + (results[i].product_sales).toFixed(2) + " | " + "Total Profit: " + (results[i].product_sales - results[i].over_head_cost).toFixed(2));
-        console.log('--------------------------------------------------------------------------------------------------')
+        console.log('----------------------------------------------------------------------------------------------------------------------------------')
       }
       supervisorStart();
     })
@@ -55,7 +55,7 @@ function supervisorStart(){
     //create a new department
     function createNewDept(){
         console.log(' ');
-        console.log('******************************* Creating New Department ********************************************');
+        console.log('********************************************* Creating New Department *********************************************************');
       
       inquirer.prompt([
       {
